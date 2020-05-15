@@ -1,0 +1,134 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Work Sans';
+    padding: 0;
+    margin: 0;
+}
+
+a:link, a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.dropdown_container {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    padding: 5px 5px 5px 5px;
+}
+#navbar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    box-shadow: 3px 3px 6px black;
+    display: none;
+}
+
+#navbar a {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.dropdown_container:hover #navbar {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    box-shadow: 3px 3px 6px black;
+}
+
+#navbar a:hover {
+    background-color: #555555;
+    color: #f9f9f9;
+}
+.current_page {
+    color: #f9f9f9 !important;
+    background-color: black;
+}
+
+.title_box {
+    position: relative;
+    justify-content: center;
+    background: none;
+
+}
+.name_box {
+    border-bottom: 3px solid #f1f1f1;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    
+    
+}
+
+.title_background {
+    background-image: url("..\\images\\keyboard.jpeg");
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    height: 55%;
+    /* for gradient background 
+    background: rgb(6,6,6);
+    background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(57,57,57,1) 100%); 
+    */
+}
+
+.name {
+    font-size: 90px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgba(44, 44, 44, 0.795);
+    background: none;
+}
+
+.description {
+    color: white;
+    text-align: center;
+}
+/* for sideways nav bar
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+}
+
+#navbar ul li {
+    padding: 10px;
+}
+#navbar ul li a {
+    padding: 10px;
+    transition: .2s;
+}
+#navbar ul li a:hover {
+    background-color: rgb(56, 56, 56);
+    color: white;
+    
+} */
+
+
+.debug {
+    border-width: 2px;
+    border-style: solid;
+    border-color: greenyellow;
+}

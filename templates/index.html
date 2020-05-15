@@ -1,0 +1,25 @@
+
+
+{% extends "template.html" %}
+{% set active_page = 'index' %}
+{% block body %}
+<div class="title_box">
+    <div class="title_background"></div>
+    <div class="name_box">
+        <div class="name">Eric Durbin Portfolio</div>
+        <div class="description">I am a beginning programmer who is just trying to make an honest living out here in the real world ya know? </div>
+    </div>
+</div>
+<div class="dropdown_container">
+    <div class="dropdown_activator"><i class="fas fa-bars" style="color:white;"></i></div>
+    <div id="navbar">
+        {% for href, id, display_name in nav_bar %}
+            <a {% if id == active_page %} class="current_page" {% endif %} href="{{href}}">{{display_name}}</a>
+        {% endfor %}     
+    </div>
+</div>
+<div>
+    <h2>About Me</h2>
+    <p>stuff about me</p>
+</div>
+{% endblock %}
