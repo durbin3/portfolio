@@ -1,6 +1,8 @@
+/* defaults */
 html {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,56 +11,84 @@ body {
     margin: 0;
 }
 
+
+/* nav bar */
+
 a:link, a:visited {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
-.dropdown_container {
-    position: absolute;
-    left: 2%;
-    top: 2%;
-    padding: 5px 5px 5px 5px;
-}
 #navbar {
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
-    width: 200px;
     background-color: #f1f1f1;
     box-shadow: 3px 3px 6px black;
-    display: none;
+    height: 50px;
+    
 }
 
 #navbar a {
-    display: flex;
-    flex-direction: column;
     color: #000000;
-    padding: 8px 16px;
     text-decoration: none;
     transition: .2s;
-}
-
-.dropdown_container:hover #navbar {
-    display: block;
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
-    box-shadow: 3px 3px 6px black;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #navbar a:hover {
     background-color: #555555;
     color: #f9f9f9;
 }
+
+.nav_left {
+    position: absolute;
+    padding-left: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nav_name {
+    margin-left: 20px;
+}
+.nav_name:hover {
+    background-color: #f1f1f1 !important;
+    color: #555555 !important;
+}
+.nav_right {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 100%;
+    right: 80;
+    margin-right: 50px;
+}
+
 .current_page {
     color: #f9f9f9 !important;
-    background-color: black;
+    background-color: rgb(39, 39, 39);
 }
+
+
+/* title box */
 
 .title_box {
     position: relative;
     justify-content: center;
     background: none;
-
+    top: 50px;
+    overflow: hidden;
 }
 .name_box {
     border-bottom: 3px solid #f1f1f1;
@@ -79,7 +109,7 @@ a:link, a:visited {
 .title_background {
     background-image: url("..\\images\\keyboard.jpeg");
     background-repeat: no-repeat;
-
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     filter: blur(6px);
@@ -96,39 +126,104 @@ a:link, a:visited {
     font-weight: bolder;
     color: white;
     text-align: center;
-    text-shadow: 3px 3px 10px rgba(44, 44, 44, 0.795);
+    text-shadow: 4px 4px 6px rgba(44, 44, 44, 0.795);
     background: none;
 }
 
 .description {
     color: white;
     text-align: center;
-}
-/* for sideways nav bar
-#navbar ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    justify-content: center;
+    font-weight: lighter;
 }
 
-#navbar ul li {
-    padding: 10px;
-}
-#navbar ul li a {
-    padding: 10px;
-    transition: .2s;
-}
-#navbar ul li a:hover {
-    background-color: rgb(56, 56, 56);
-    color: white;
-    
-} */
 
+/* misc */
 
 .debug {
     border-width: 2px;
     border-style: solid;
     border-color: greenyellow;
+}
+
+/**********************/
+
+
+/* table of contents */
+.toc_c {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.toc {
+    margin: 5px;
+    padding: 10px;
+}
+.toc_c a {
+    margin: 5px;
+    padding: 10px;
+}
+
+/**********************/
+
+
+
+/* page content */
+.content {
+    font-weight: lighter;
+    text-align: center;
+    justify-content: center;
+    margin-top: 4%;
+    min-height: 100%;
+}
+
+.content_title {
+    font-size: 4em;
+    margin: 15px;
+}
+
+.content_body {
+    margin: auto;
+    font-size: 1em;
+    max-width: 50%;
+    padding-bottom: 100px;
+}
+
+.about_me {
+    text-align: left;
+    line-height: 30px;
+}
+
+.project_title {
+    font-size: 2em;
+    padding-top: 60px;
+}
+
+.text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1em;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.tech_title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/**********************/
+
+
+/* footer */
+
+#footer {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    padding-left: 100px;
+
 }

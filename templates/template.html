@@ -1,6 +1,6 @@
 <html>
     <head>
-        {% set nav_bar = [('/', 'index', 'Index'), ('/projects', 'projects', 'Projects'), ('/challenges', 'challenges', 'Challenges')] %}
+        {% set nav_bar = [('/projects', 'projects', 'Projects'), ('/challenges', 'challenges', 'Challenges')] %}
         <link rel="stylesheet" href="static/css/styles.css" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Hind:wght@300&family=Montserrat:wght@300&family=Nunito+Sans:wght@300&family=Varela+Round&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -11,10 +11,19 @@
     <body>
 
         <!-- nav bar -->
-        
+        <div id="navbar">
+            <div class="nav_left">
+                <a class="nav_name" href="/">Eric Durbin</a>
+            </div>
+            <div class="nav_right">
+                {% for href, id, display_name in nav_bar %}
+                    <a {% if id == active_page %} class="current_page" {% endif %} href="{{href}}">{{display_name}}</a>
+                {% endfor %}
+            </div>     
+        </div>
         <!-- content -->
         
-        <div id="bodycontent">
+        <div id="body_content debug">
 			{% block body %}
 			{% endblock %}
         </div>
@@ -23,7 +32,8 @@
         <!-- footer -->
         {% block footer %}
         <div id="footer">
-            <h2>footer</h2>
+            <div class="footer_text">Eric Durbin</div>
+            <a href="https://github.com/durbin3" style="position:absolute; right:100;">My Github</a>
         </div>
         {% endblock %}
     </body>
