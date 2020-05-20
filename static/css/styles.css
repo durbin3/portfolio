@@ -227,3 +227,27 @@ a:link, a:visited {
     padding-left: 100px;
 
 }
+
+.images {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.images img {
+    margin: auto;
+    border: 2px solid black;
+    display: none;
+    height: 65%;
+}
+
+.button-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+.button-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}

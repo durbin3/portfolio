@@ -3,6 +3,7 @@
 {% block body %}
 
 {% set projects = [("#midi", "Midi File Parser"), ("#synergi", "Synergi"), ("#music_maker", "Music Generator"), ("#discord_bot", "Discord Bot"), ("#rock_paper", "Rock Paper Scissors")] %}
+
 <div class="content">
     <div class="content_title">Projects</div>
     <div class="toc">
@@ -16,8 +17,14 @@
     <div class="content_body">
             <div id="midi">
                 <div class="project_title">Midi File Parser</div>
-                <div class="">
-                    <!-- <img src="static/images/midi"/> -->
+                <div>
+                    <div class="images">
+                        <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="button-right" onclick="plusDivs(+1)">&#10095;</button>
+                        <img class="slideshow" src="static/images/midi_1.png"/>
+                        <img class="slideshow" src="static/images/midi_2.png"/>
+                        <img class="slideshow" src="static/images/midi_3.png"/>
+                    </div>
                     <div class="text">
                         The Midi file Parser can read in a directory,
                         and after populating the gui with the .midi files,
@@ -96,6 +103,28 @@
             </div>
     </div>
 </div>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slideshow");
+        if (n > x.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>
 
 {% endblock %}
