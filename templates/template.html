@@ -1,6 +1,6 @@
 <html>
     <head>
-        {% set nav_bar = [('/projects', 'projects', 'Projects'), ('/challenges', 'challenges', 'Challenges')] %}
+        {% set nav_bar = [('/projects', 'projects', 'Projects'), ('/challenges', 'challenges', 'Challenges'), ('/info', 'info', "Resume/Curriculum")] %}
         <link rel="stylesheet" href="static/css/styles.css" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Hind:wght@300&family=Montserrat:wght@300&family=Nunito+Sans:wght@300&family=Varela+Round&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -23,7 +23,7 @@
         </div>
         <!-- content -->
         
-        <div id="body_content debug">
+        <div id="body_content">
 			{% block body %}
 			{% endblock %}
         </div>

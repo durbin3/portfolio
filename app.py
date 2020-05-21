@@ -18,6 +18,9 @@ def challenges():
     return render_template('challenges.html')
 
 
+@app.route("/info")
+def info():
+    return render_template('info.html')
 
 if __name__ == '__main__':
     app.run(debug = True)

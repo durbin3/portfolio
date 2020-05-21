@@ -16,7 +16,7 @@
     </div>
     <div class="content_body">
             <div id="midi">
-                <div class="project_title">Midi File Parser</div>
+                <div class="title">Midi File Parser</div>
                 <div>
                     <div class="images">
                         <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
@@ -42,10 +42,20 @@
                 </div>
             </div>
             <div id="synergi">
-                <div class="project_title">Synergi</div>
+                <div class="title">Synergi</div>
                 <a href="https://github.com/legalian/synergi">Github Repo</a>
+                <div class="images">
+                    <button class="button-left" onclick="moveSynergi(-1)">&#10094;</button>
+                    <button class="button-right" onclick="moveSynergi(+1)">&#10095;</button>
+                    <img class="synergi_slideshow" src="static/images/homepage.png"/>
+                    <img class="synergi_slideshow" src="static/images/login.png"/>
+                    <img class="synergi_slideshow" src="static/images/projects.png"/>
+                    <img class="synergi_slideshow" src="static/images/github.png"/>
+                    <img class="synergi_slideshow" src="static/images/create_new.png"/>
+                    <img class="synergi_slideshow" src="static/images/editor.png"/>
+                </div>
                 <div class="text">
-                    Synergi is a real time collaborative code editor with GitHub integration.
+                    Synergi is a work-in-progress real time collaborative code editor with GitHub integration.
                     The user can log into the website through GitHub, and after allowing api access to Synergi,
                     the user can import a project from GitHub into Synergi. This will allow them to use the in-built
                     code editor to edit any file in the imported repository in real time, at the same time as another user.
@@ -66,7 +76,7 @@
                 </div>
             </div>
             <div id="music_maker">
-                <div class="project_title">Music Generator</div>
+                <div class="title">Music Generator</div>
                 <a href="https://github.com/durbin3/music-maker">Github repo</a>
                 <div class="text">
                     The Music Generator can take in a time signature, tonality, and length and generate a song
@@ -82,7 +92,7 @@
                 <div class="text">Java</div>
             </div>
             <div id="discord_bot">
-                <div class="project_title">Discord Bot</div>
+                <div class="title">Discord Bot</div>
                 <div class="text">
                     The Discord Bot is a smaller project where I created a program to parse the messages being sent
                     in my friends Discord chatroom and if one of the messages contains a reference to a movie we have seen,
@@ -92,7 +102,7 @@
                 <div class="text">Javascript, Discord API</div>
             </div>
             <div id="rock_paper">
-                <div class="project_title">Rock Paper Scissors</div>
+                <div class="title">Rock Paper Scissors</div>
                 <div class="text">
                     The very first project I ever made, this is the game Rock, Paper, Scissors.
                     The player can play with one or two players in the browser. Super simple, but I couldn't leave it
@@ -124,6 +134,28 @@
             x[i].style.display = "none";
         }
         x[slideIndex - 1].style.display = "block";
+    }
+
+    var synergiIndex = 1;
+    showSynergi(synergiIndex);
+
+    function moveSynergi(n) {
+        showSynergi(synergiIndex += n);
+    }
+
+    function showSynergi(n) {
+        var i;
+        var x = document.getElementsByClassName("synergi_Slideshow");
+        if (n > x.length) {
+            synergiIndex = 1;
+        }
+        if (n < 1) {
+            synergiIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[synergiIndex - 1].style.display = "block";
     }
 </script>
 

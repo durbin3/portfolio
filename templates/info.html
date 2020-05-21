@@ -1,0 +1,32 @@
+{% extends "template.html" %}
+{% set active_page = 'info' %}
+{% block body%}
+
+<div class="content">
+    <div class="content_title">About Me</div>
+    <div class="content_body" style="width: 40%;">
+        <a href="static/files/resume.pdf">Resume</a>
+
+        <div class="title">Curriculum</div>
+        <div class="text">
+            In my first year at Purdue University, I have taken these computer courses:
+            <ul>
+                <li>Object Oriented Programming (Java)</li>
+                <li>Programming in C (C)</li>
+                <li>Computer Science Tools (Git/Bash)</li>
+                <li>Foundations of Computer Science (Data Structures/Time Compexity/Proof Techniques)</li>
+            </ul>
+        </div>
+        <div class="text">
+            I have also taken these non-computer courses
+            <ul>
+                <li>Calculus II</li>
+                <li>Calculus III</li>
+                <li>Music Theory I</li>
+                <li>Wind Ensemble (Concert Band)</li>
+                <li>American Music Repertory Ensemble (Jazz Band)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

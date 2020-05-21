@@ -11,13 +11,30 @@ body {
     margin: 0;
 }
 
-
-/* nav bar */
-
 a:link, a:visited {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
+
+a:hover {
+    color: rgb(156, 4, 4);
+    transition: .2s;
+    text-decoration: underline;
+}
+a {
+    font-size: 1.2em;
+}
+
+::-moz-selection { 
+    background: rgb(73, 73, 73);
+    color: #f1f1f1;
+}
+::selection { 
+    background: rgb(73, 73, 73); 
+    color: #f1f1f1;
+}
+
+/* nav bar */
 #navbar {
     overflow: hidden;
     position: fixed;
@@ -30,12 +47,13 @@ a:link, a:visited {
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
-    box-shadow: 3px 3px 6px black;
+    box-shadow: 0px 3px 6px black;
     height: 50px;
     
 }
 
 #navbar a {
+    font-size: 1.1em;
     color: #000000;
     text-decoration: none;
     transition: .2s;
@@ -87,7 +105,7 @@ a:link, a:visited {
     position: relative;
     justify-content: center;
     background: none;
-    top: 50px;
+    top: 0;
     overflow: hidden;
 }
 .name_box {
@@ -149,6 +167,9 @@ a:link, a:visited {
 
 
 /* table of contents */
+.toc_title {
+    font-size: 1.5em;
+}
 .toc_c {
     display: flex;
     flex-direction: row;
@@ -169,6 +190,10 @@ a:link, a:visited {
 
 
 /* page content */
+#body_content {
+    min-height: 100%;
+    margin-top: 50px;
+}
 .content {
     font-weight: lighter;
     text-align: center;
@@ -194,7 +219,7 @@ a:link, a:visited {
     line-height: 30px;
 }
 
-.project_title {
+.title {
     font-size: 2em;
     padding-top: 60px;
 }
@@ -230,6 +255,7 @@ a:link, a:visited {
 
 .images {
     position: relative;
+    display: flex;
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -238,7 +264,7 @@ a:link, a:visited {
     margin: auto;
     border: 2px solid black;
     display: none;
-    height: 65%;
+    max-width: 100%;
 }
 
 .button-left {
@@ -246,7 +272,7 @@ a:link, a:visited {
     left: 0;
     top: 50%;
 }
-.button-right {
+.button-right { 
     position: absolute;
     right: 0;
     top: 50%;
