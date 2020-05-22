@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 app = Flask(__name__)
 
 
@@ -21,6 +21,10 @@ def challenges():
 @app.route("/info")
 def info():
     return render_template('info.html')
+
+@app.route("/resume")
+def download_resume():
+    return send_file("static/files/resume.pdf")
 
 if __name__ == '__main__':
     app.run(debug = True)
