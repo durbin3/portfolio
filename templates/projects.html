@@ -2,7 +2,7 @@
 {% set active_page = 'projects' %}
 {% block body %}
 
-{% set projects = [("#midi", "Midi File Parser"), ("#synergi", "Synergi"), ("#music_maker", "Music Generator"), ("#discord_bot", "Discord Bot"), ("#rock_paper", "Rock Paper Scissors")] %}
+{% set projects = [("#midi", "Midi File Parser"), ("#synergi", "Synergi"), ("#music_maker", "Music Generator"), ("#conway", "Conway's Game of Life"), ("#discord_bot", "Discord Bot"), ("#rock_paper", "Rock Paper Scissors")] %}
 
 <div class="content">
     <div class="content_title">Projects</div>
@@ -89,6 +89,15 @@
                     recursively subdividing trees.
                 </div>
                 <div class="tech_title">Technologies Used:</div>
+                <div class="text">Java</div>
+            </div>
+            <div id="conway">
+                <div class="title">Conway's Game of Life</div>
+                <div class="text">
+                    Solo project that recreated the cell evolution simulator conceptualized
+                    by John Conway in Java for the purpose of gaining experience with java
+                </div>
+                <div class="tech_title">Technologies Used</div>
                 <div class="text">Java</div>
             </div>
             <div id="discord_bot">
